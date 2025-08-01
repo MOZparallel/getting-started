@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
     SONAR_HOST = 'http://localhost:9000'
-    SONAR_TOKEN = credentials('sonarqubetoken')
+    SONAR_TOKEN = credentials('SonarQubeToken')
   }
 
     stages {
@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // git 'https://github.com/deopura/getting-started.git'
-                git branch: 'main', url: 'https://github.com/deopura/getting-started.git'
+                git branch: 'main', url: 'https://github.com/MOZparallel/getting-started.git'
           }
         }
 
